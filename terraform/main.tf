@@ -14,7 +14,7 @@ resource "random_pet" "rg_name" {
 # Create resource group
 resource "azurerm_resource_group" "webServer_rg" {
   location = var.resource_group_location
-  name     = random_pet.rg_name.id
+  name     = var.resource_group_name_prefix
 }
 
 # Create virtual network
